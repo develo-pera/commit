@@ -1,4 +1,6 @@
 import "./globals.scss";
+import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
 
 export const metadata = {
   title: "Commit",
@@ -8,7 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="dark">{children}</body>
+      <body className="dark">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
